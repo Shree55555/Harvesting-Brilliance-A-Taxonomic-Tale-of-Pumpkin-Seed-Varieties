@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Seed AI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* ===== FULL BACKGROUND ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('{{ url_for("static", filename="images/harvest.jpg") }}');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+/* ===== HERO ===== */
+.hero-about {
+    padding: 100px 20px 40px;
+    text-align: center;
+}
+
+.hero-about h1 {
+    font-weight: 700;
+}
+
+.hero-about p {
+    color: #ddd;
+    max-width: 700px;
+    margin: 10px auto 0;
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* ===== SECTION HEADINGS ===== */
+.section-title {
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* ===== TEXT ===== */
+p {
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold">SEED AI</a>
+        <div>
+            <a href="/" class="text-white me-3">Home</a>
+            <a href="/about" class="text-white me-3">About</a>
+            <a href="/predict" class="text-white">Predict</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-about">
+    <h1>About Seed AI</h1>
+    <p>
+        Bridging agriculture and artificial intelligence to deliver precise,
+        data-driven seed classification and insights.
+    </p>
+</div>
+
+<!-- CONTENT -->
+<div class="glass-card">
+
+    <h4 class="section-title">🌱 Project Overview</h4>
+    <p>
+        Seed AI is a machine learning-based web application designed to classify pumpkin seed varieties
+        using morphological features. By leveraging advanced algorithms, the system analyzes physical
+        characteristics such as area, perimeter, compactness, and shape to determine the correct seed type.
+    </p>
+
+    <h4 class="section-title">⚙️ How It Works</h4>
+    <p>
+        The application is powered by a trained Random Forest model that processes user-provided input values.
+        These inputs represent measurable attributes of seeds. The model evaluates patterns within the data
+        and predicts the most probable class with high accuracy.
+    </p>
+
+    <h4 class="section-title">📊 Why This Matters</h4>
+    <p>
+        Accurate seed classification plays a crucial role in agriculture, research, and production planning.
+        It helps farmers and researchers select appropriate varieties, optimize yield, and make informed decisions.
+        This system demonstrates how AI can simplify complex classification tasks in real-world scenarios.
+    </p>
+
+    <h4 class="section-title">🚀 Future Scope</h4>
+    <p>
+        This project can be extended to support image-based classification, real-time agricultural monitoring,
+        and integration with smart farming systems. It highlights the potential of AI-driven tools in transforming
+        traditional agricultural practices into intelligent, automated workflows.
+    </p>
+
+</div>
+
+</body>
+</html>

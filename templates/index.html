@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seed AI - Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('{{ url_for("static", filename="images/hero.jpg") }}');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+/* ===== PROFESSIONAL NAVBAR ===== */
+.navbar {
+    background: rgba(0,0,0,0.6) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.navbar a {
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e3a018 !important;
+}
+
+/* HERO */
+.hero {
+    padding: 100px 0 40px; /* reduced bottom gap */
+    text-align: center;
+}
+
+/* SECTION */
+.section {
+    padding: 40px 0; /* reduced spacing */
+}
+
+/* REMOVE WHITE BG */
+.bg-light {
+    background: transparent !important;
+}
+
+/* TEXT */
+.text-muted {
+    color: #ddd !important;
+}
+
+/* BUTTON */
+.btn-custom {
+    background-color: #e3a018;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 30px;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #c88a14;
+    transform: scale(1.05);
+}
+
+/* ===== INFO CARD ===== */
+.info-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.6);
+}
+
+/* PARAGRAPH IMPROVED */
+.info-text {
+    font-weight: 600;
+    font-size: 16.5px;
+    line-height: 1.8;
+    color: #e5e5e5;
+}
+
+/* ===== FEATURE CARDS ===== */
+.feature-card {
+    padding: 25px;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.feature-card h5 {
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4">SEED AI</a>
+
+        <div>
+            <a href="/" class="text-white me-3">Home</a>
+            <a href="/about" class="text-white me-3">About</a>
+            <a href="/predict" class="text-white">Predict</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1 class="display-4 fw-bold">Harvesting Brilliance</h1>
+    <p class="lead mt-3">
+        Advanced taxonomic classification of pumpkin seed varieties using Machine Learning
+    </p>
+    <a href="/predict" class="btn btn-custom mt-3">Start Classification</a>
+</div>
+
+<!-- INFO -->
+<div class="section text-center">
+    <div class="container">
+
+        <div class="info-card">
+            <h3 class="fw-bold mb-4">Intelligent Seed Analysis</h3>
+
+            <p class="info-text">
+                Pumpkin seeds exhibit significant variation in size, shape, texture, and structural composition.
+                Identifying these subtle differences manually can be time-consuming and prone to error. 
+                Our AI-powered system simplifies this process by analyzing key morphological features such as 
+                area, perimeter, aspect ratio, roundness, and compactness with high precision.
+            </p>
+
+            <p class="info-text">
+                Using a trained machine learning model, the platform detects hidden patterns within the data 
+                that are not easily visible to the human eye. This enables accurate classification of pumpkin 
+                seed varieties in real time, ensuring faster and more reliable results compared to traditional methods.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section bg-light">
+    <div class="container text-center">
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <h5>🌱 Precision</h5>
+                    <p>Accurate classification using ML models</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <h5>⚡ Fast Results</h5>
+                    <p>Instant prediction system</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <h5>📊 Data Driven</h5>
+                    <p>Based on real datasets</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
