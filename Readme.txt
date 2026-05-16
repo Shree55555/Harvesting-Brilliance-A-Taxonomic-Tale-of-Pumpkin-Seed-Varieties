@@ -1,0 +1,1 @@
+Pumpkin seeds are often underestimated despite being nutritionally dense and agriculturally valuable. This project focuses on the classification of pumpkin seed varieties based on morphological features and genetic characteristics, aiming to uncover their diversity and practical applications in agriculture, nutrition, and food innovation.
